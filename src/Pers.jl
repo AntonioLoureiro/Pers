@@ -28,6 +28,12 @@ Per(d::Date)=Per(string(Dates.year(d))*"-"*(("0"*string(Dates.month(d)))[end-1:e
 
 import Base.+
 import Base.-
+import Base.<
+import Base.>
+
+Base.:<(p1::Per,p2::Per)=p1.last_day<p2.last_day
+Base.:>(p1::Per,p2::Per)=p1.last_day>p2.last_day
+
 Base.:+(p1::Per, i::Int)=Per(p1.last_day+Base.Dates.Month(i))
 Base.:+(i::Int,p1::Per)=Per(p1.last_day+Base.Dates.Month(i))
 

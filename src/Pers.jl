@@ -43,6 +43,9 @@ Base.:+(i::Int,p1::Per)=Per(p1.last_day+Base.Dates.Month(i))
 Base.:-(p1::Per, i::Int)=Per(p1.last_day-Base.Dates.Month(i))
 Base.:-(p1::Per, p2::Per)=(p1.year-p2.year)*12+(p1.month-p2.month)
 
+import Base.convert
+
+convert(::Type{Pers.Per}, str::Real) =Per(str)
 
 
 end # module

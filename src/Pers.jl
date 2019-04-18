@@ -1,5 +1,9 @@
 module Pers
 
+if VERSION>=VersionNumber(0,7)
+   using Dates 
+end
+
 export Per,+,-
 
 struct Per

@@ -1,0 +1,7 @@
+name = "Pers"
+uuid = "b263fc89-34c8-4dea-a378-d46350d17c22"
+authors = ["Antonio Loureiro <ajose.loureiro@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
